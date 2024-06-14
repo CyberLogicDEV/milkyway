@@ -1,0 +1,13 @@
+@import 'material';
+
+.battle {
+    width: 50%;
+    margin: auto;
+    padding: 5rem 2rem;
+    text-align: center;
+
+    &__logo {
+        display: block;
+        margin: auto;
+    }
+}

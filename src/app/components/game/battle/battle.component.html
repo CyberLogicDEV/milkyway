@@ -1,0 +1,13 @@
+<div class="battle">
+    <img src="assets/images/logo.png" alt="game logo" class="battle__logo">
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle value="people">People</mat-button-toggle>
+        <mat-button-toggle value="starships">Starships</mat-button-toggle>
+    </mat-button-toggle-group>
+
+    <div>
+        <app-button (click)="onFightClick()">LET'S FIGHT!</app-button>
+    </div>
+
+    {{ walka }}
+</div>
