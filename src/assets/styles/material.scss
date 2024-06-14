@@ -1,0 +1,19 @@
+@import 'variables';
+
+.mat-button-toggle-group {
+    border: 2px solid $yellow-color;
+    margin: 5rem 0;
+    background-color: #000;
+
+    .mat-button-toggle {
+        color: #FFF;
+        font-size: 2rem;
+        padding: .5rem 4rem;
+    }
+
+    .mat-button-toggle-checked {
+        background-color: $yellow-color !important;
+        color: #000;
+    }
+}
+
