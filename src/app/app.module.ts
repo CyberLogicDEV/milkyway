@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IntroComponent } from './components/intro/intro.component';
 import { ButtonModule } from './shared/components/button/button.module';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { ButtonModule } from './shared/components/button/button.module';
     AppRoutingModule,
     ButtonModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
