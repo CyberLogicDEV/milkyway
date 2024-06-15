@@ -1,13 +1,38 @@
+@if (isLoading) {
+    <div class="loader-container">
+        <img src="assets/images/loader{{ battleType ? '-fight' : '' }}.gif" alt="game loader" class="loader-container__loader">
+    </div>
+}
+
 <div class="battle">
     <img src="assets/images/logo.png" alt="game logo" class="battle__logo">
-    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+    <div class="battle__header">Choose opponents</div>
+    <mat-button-toggle-group (change)="onBattleTypeChange($event)" name="battleType" class="battle__battle-type">
         <mat-button-toggle value="people">People</mat-button-toggle>
         <mat-button-toggle value="starships">Starships</mat-button-toggle>
     </mat-button-toggle-group>
 
-    <div>
-        <app-button (click)="onFightClick()">LET'S FIGHT!</app-button>
-    </div>
+    @if (battleType) {
+        <div class="battle__fight-button">
+            <app-button (click)="onFightClick()">LET'S FIGHT!</app-button>
+        </div>
+    }
 
-    {{ walka }}
+    @if (true) {
+        <div>
+            <mat-card class="example-card" appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>Shiba Inu</mat-card-title>
+                    <!-- <mat-card-subtitle>Dog Breed</mat-card-subtitle> -->
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    }
 </div>
