@@ -1,7 +1,7 @@
 @import 'variables';
 
 .mat-button-toggle-group {
-    border: 2px solid $yellow-color;
+    border: 2px solid $color-yellow;
     background-color: #000;
 
     .mat-button-toggle {
@@ -11,8 +11,17 @@
     }
 
     .mat-button-toggle-checked {
-        background-color: $yellow-color !important;
+        background-color: $color-yellow !important;
         color: #000;
     }
 }
 
+.mat-mdc-card {
+    background-color: #000;
+    border: 2px solid $color-yellow;
+    color: #FFF;
+
+    &-subtitle {
+        color: #FFF;
+    }
+}

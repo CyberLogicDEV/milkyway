@@ -1,4 +1,5 @@
 @import 'material';
+@import 'variables';
 
 .loader-container {
     background-color: #000000e8;
@@ -24,6 +25,7 @@
     &__logo {
         display: block;
         margin: auto;
+        max-width: 100%;
     }
 
     &__header {
@@ -38,5 +40,105 @@
 
     &__fight-button {
         margin-top: 5rem;
+    }
+
+    &__fight-results {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10rem;
+        column-gap: 10rem;
+
+        &__container {
+            flex: 1 1 0px;
+        }
+
+        &__score {
+            color: #FFF;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+            background-color: #000;
+            border: 2px solid $color-yellow;
+            border-radius: 1rem;
+            padding: .5rem 1.5rem
+        }
+
+        &__player-card {
+
+            &__title {
+                text-align: left;
+                font-size: 2.5rem;
+            }
+
+            &__content {
+                text-align: left;
+                font-size: 2rem;
+            }
+
+            &__content {
+                margin-top: 5rem;
+                padding: 1.5rem;
+            }
+
+            &__subtitle {
+                text-align: left;
+                font-size: 1.5rem;
+                margin-top: 1rem;
+            }
+
+            &__result {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: rotate(340deg) translate(-35%, -65%);
+                font-size: 3rem;
+                font-weight: 500;
+            }
+        }
+
+        .result-win {
+            border: 2px solid $color-green;
+
+            .battle__fight-results__player-card__result {
+                color: $color-green;
+            }
+        }
+
+        .result-lose {
+            border: 2px solid $color-red;
+
+            .battle__fight-results__player-card__result {
+                color: $color-red;
+            }
+        }
+    }
+}
+
+/* Mobile version */
+
+@media screen and (max-width: 1200px) {
+    .battle {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .battle {
+        &__fight-results {
+            flex-direction: column;
+            gap: 7rem;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .mat-button-toggle-group {
+        max-width: 100%;
+    }
+
+    .battle {
+        width: 100%;
     }
 }

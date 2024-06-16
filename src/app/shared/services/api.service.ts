@@ -14,11 +14,13 @@ export class ApiService {
 
     constructor(private http: HttpClient) { }
 
-    getPlayer(battleType: BattleType, id: string): Observable<Player> {
+    public getPlayer(battleType: BattleType, id: string): Observable<Player> {
         return this.http.get<PersonDto | StarshipDto>(this.apiUrl + `${battleType}/${id}`).pipe(
             map((player: PersonDto | StarshipDto) => {
                 return {
                     name: player.result.properties.name,
+                    description: player.result.description,
+                    type: battleType,
                     feature: battleType === BattleType.People ?
                         (player as PersonDto).result.properties.mass :
                         (player as StarshipDto).result.properties.crew
@@ -31,7 +33,7 @@ export class ApiService {
         );
     }
 
-    getPlayerIdList(battleType: BattleType): Observable<string[]> {
+    public getPlayerIdList(battleType: BattleType): Observable<string[]> {
         const PAGE = 'page';
         const LIMIT = 'limit';
         const LIMIT_VALUE = 10;
