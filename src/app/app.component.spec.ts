@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'milkyway' title`, () => {
+  it(`should have the 'StarWars Galaxy Adventure' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('milkyway');
+    expect(app.title).toEqual('StarWars Galaxy Adventure');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, milkyway');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, StarWars Galaxy Adventure');
   });
 });

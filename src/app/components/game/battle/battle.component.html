@@ -18,32 +18,30 @@
         </div>
     }
 
-    @if (true) {
-        <div class="battle__fight-results">
-            @for (player of players; track player.name; let  i = $index) {
-                <div class="battle__fight-results__container">
-                    <div class="battle__fight-results__score">
-                        <div>Player {{ i + 1 }}</div>
-                        <div>Score: {{ playersScores[i] }}</div>
-                    </div>
-                    <mat-card [ngClass]="{
-                        'result-win': player.battleResult === batttleResult.Win,
-                        'result-lose': player.battleResult === batttleResult.Lose }"
-                        class="battle__fight-results__player-card"
-                        appearance="outlined">
-                        <mat-card-header>
-                            <mat-card-title class="battle__fight-results__player-card__title">{{ player.name }}</mat-card-title>
-                            <mat-card-subtitle class="battle__fight-results__player-card__subtitle">{{ player.description }}</mat-card-subtitle>
-                        </mat-card-header>
-                        <mat-card-content class="battle__fight-results__player-card__content">
-                            {{ player.type === battleType.People ? 'Mass:' : 'Crew:' }} {{ player.feature }}
-                        </mat-card-content>
-                        <div class="battle__fight-results__player-card__result">
-                            {{ player.battleResult }}
-                        </div>
-                    </mat-card>
+    <div class="battle__fight-results">
+        @for (player of players; track player.name; let  i = $index) {
+            <div class="battle__fight-results__container">
+                <div class="battle__fight-results__score">
+                    <div>Player {{ i + 1 }}</div>
+                    <div>Score: {{ playersScores[i] }}</div>
                 </div>
-            }
-        </div>
-    }
+                <mat-card [ngClass]="{
+                    'result-win': player.battleResult === batttleResult.Win,
+                    'result-lose': player.battleResult === batttleResult.Lose }"
+                    class="battle__fight-results__player-card"
+                    appearance="outlined">
+                    <mat-card-header>
+                        <mat-card-title class="battle__fight-results__player-card__title">{{ player.name }}</mat-card-title>
+                        <mat-card-subtitle class="battle__fight-results__player-card__subtitle">{{ player.description }}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content class="battle__fight-results__player-card__content">
+                        {{ player.type === battleType.People ? 'Mass:' : 'Crew:' }} {{ player.feature }}
+                    </mat-card-content>
+                    <div class="battle__fight-results__player-card__result">
+                        {{ player.battleResult }}
+                    </div>
+                </mat-card>
+            </div>
+        }
+    </div>
 </div>
