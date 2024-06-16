@@ -4,7 +4,7 @@ export enum BattleType {
 }
 
 export enum BattleResult {
-    Win,
-    Lose,
-    Draw,
+    Win = 'Winner',
+    Lose = 'Loser',
+    Draw = 'Draw',
 }

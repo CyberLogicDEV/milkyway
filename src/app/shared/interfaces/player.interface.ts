@@ -1,7 +1,10 @@
-import { BattleResult } from "../enums/battle.enum"
+import { BattleResult, BattleType } from "../enums/battle.enum"
 
 export interface Player {
-    name: string,
-    feature: string
-    battleResult?: BattleResult,
+    name: string;
+    description: string;
+    feature: string;
+    type: BattleType;
+    score?: number;
+    battleResult?: BattleResult;
 }
