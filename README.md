@@ -1,5 +1,9 @@
 # Milkyway
 
+## Screenshot
+
+![image](https://github.com/CyberLogicDEV/milkyway/assets/29571207/33857eb9-7281-4988-aaf3-7ce560d89107)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
 
 ## Development server
