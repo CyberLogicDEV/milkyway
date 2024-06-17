@@ -9,7 +9,7 @@
     <div class="battle__header">Choose opponents</div>
     <mat-button-toggle-group (change)="onBattleTypeChange($event)" name="battleType" class="battle__battle-type">
         <mat-button-toggle data-test="people-button" value="people">People</mat-button-toggle>
-        <mat-button-toggle value="starships">Starships</mat-button-toggle>
+        <mat-button-toggle data-test="starships-button" value="starships">Starships</mat-button-toggle>
     </mat-button-toggle-group>
 
     @if (selectedBattleType) {
@@ -20,10 +20,10 @@
 
     <div class="battle__fight-results">
         @for (player of players; track player.name; let  i = $index) {
-            <div class="battle__fight-results__container">
+            <div data-test="fight-results" class="battle__fight-results__container">
                 <div class="battle__fight-results__score">
                     <div>Player {{ i + 1 }}</div>
-                    <div>Score: {{ playersScores[i] }}</div>
+                    <div data-test="fight-score">Score: {{ playersScores[i] }}</div>
                 </div>
                 <mat-card [ngClass]="{
                     'result-win': player.battleResult === batttleResult.Win,
@@ -32,12 +32,12 @@
                     appearance="outlined">
                     <mat-card-header>
                         <mat-card-title class="battle__fight-results__player-card__title">{{ player.name }}</mat-card-title>
-                        <mat-card-subtitle class="battle__fight-results__player-card__subtitle">{{ player.description }}</mat-card-subtitle>
+                        <mat-card-subtitle data-test="fight-results-subtitle" class="battle__fight-results__player-card__subtitle">{{ player.description }}</mat-card-subtitle>
                     </mat-card-header>
                     <mat-card-content class="battle__fight-results__player-card__content">
                         {{ player.type === battleType.People ? 'Mass:' : 'Crew:' }} {{ player.feature }}
                     </mat-card-content>
-                    <div class="battle__fight-results__player-card__result">
+                    <div data-test="fight-result" class="battle__fight-results__player-card__result">
                         {{ player.battleResult }}
                     </div>
                 </mat-card>
