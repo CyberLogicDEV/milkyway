@@ -1,0 +1,24 @@
+{
+    "message": "ok",
+    "total_records": 36,
+    "total_pages": 4,
+    "previous": null,
+    "next": null,
+    "results": [
+        {
+            "uid": "2",
+            "name": "CR90 corvette",
+            "url": "https://www.swapi.tech/api/starships/2"
+        },
+        {
+            "uid": "3",
+            "name": "Star Destroyer",
+            "url": "https://www.swapi.tech/api/starships/3"
+        },
+        {
+            "uid": "5",
+            "name": "Sentinel-class landing craft",
+            "url": "https://www.swapi.tech/api/starships/5"
+        }
+    ]
+}

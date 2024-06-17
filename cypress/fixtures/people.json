@@ -1,0 +1,24 @@
+{
+    "message": "ok",
+    "total_records": 82,
+    "total_pages": 9,
+    "previous": null,
+    "next": null,
+    "results": [
+        {
+            "uid": "2",
+            "name": "Boba Fett",
+            "url": "https://www.swapi.tech/api/people/22"
+        },
+        {
+            "uid": "3",
+            "name": "IG-88",
+            "url": "https://www.swapi.tech/api/people/23"
+        },
+        {
+            "uid": "5",
+            "name": "Bossk",
+            "url": "https://www.swapi.tech/api/people/24"
+        }
+    ]
+}
