@@ -5,16 +5,16 @@
 }
 
 <div class="battle">
-    <img src="assets/images/logo.png" alt="game logo" class="battle__logo">
+    <img data-test="logo" src="assets/images/logo.png" alt="game logo" class="battle__logo">
     <div class="battle__header">Choose opponents</div>
     <mat-button-toggle-group (change)="onBattleTypeChange($event)" name="battleType" class="battle__battle-type">
-        <mat-button-toggle value="people">People</mat-button-toggle>
+        <mat-button-toggle data-test="people-button" value="people">People</mat-button-toggle>
         <mat-button-toggle value="starships">Starships</mat-button-toggle>
     </mat-button-toggle-group>
 
     @if (selectedBattleType) {
         <div class="battle__fight-button">
-            <app-button (click)="onFightClick()">LET'S FIGHT!</app-button>
+            <app-button data-test="fight-button" (click)="onFightClick()">LET'S FIGHT!</app-button>
         </div>
     }
 
